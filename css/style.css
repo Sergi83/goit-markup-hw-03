@@ -20,9 +20,34 @@
 
 /* ====== cкидання стилів ====== */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+}
+
 .list {
   list-style-type: none;
-  margin: 0;
 }
 
 .link {
@@ -41,13 +66,17 @@
 
 /* наслідування (inheritance) */
 body {
-  margin: 0;
+  /* margin: 0; */
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: var(--primary-letter-spacing);
   color: var(--primary-dark-color);
   background-color: var(--primary-light-color);
+}
+
+button {
+  cursor: pointer;
 }
 
 .logo {
@@ -105,7 +134,6 @@ body {
   line-height: 1.5;
   letter-spacing: var(--button-letter-spacing);
   color: var(--primary-light-color);
-  cursor: pointer;
 }
 
 .hero-button:hover,
