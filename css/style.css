@@ -38,12 +38,35 @@ ol {
   padding-left: 0;
 }
 
-button {
-  cursor: pointer;
-}
-
 img {
   display: block;
+}
+
+/* наслідування (inheritance) */
+body {
+  /* margin: 0; */
+  font-family: var(--primary-font);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--primary-dark-color);
+  background-color: var(--primary-light-color);
+}
+
+button {
+  font-style: normal;
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5; /* 150% */
+  letter-spacing: var(--button-letter-spacing);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--secondary-accent-color);
 }
 
 .list {
@@ -64,19 +87,26 @@ img {
   text-decoration: underline;
 }
 
-/* наслідування (inheritance) */
-body {
-  /* margin: 0; */
-  font-family: var(--primary-font);
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: var(--primary-letter-spacing);
-  color: var(--primary-dark-color);
-  background-color: var(--primary-light-color);
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1158px;
+  max-width: 1440px;
 }
 
-button {
-  cursor: pointer;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .logo {
@@ -93,8 +123,37 @@ button {
 
 /* ====== PAGE HEADER ====== */
 
+.page-header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.page-header-container {
+  display: flex;
+  /* height: 72px; */
+  justify-content: space-between;
+  align-items: center;
+  /* flex-shrink: 0; */
+}
+
+.page-navigation {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+.page-navigation > .logo {
+  margin-right: 76px;
+}
+
 .header-logo-span {
   color: var(--secondary-dark-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .menu-link {
@@ -106,6 +165,11 @@ button {
   font-style: normal;
 }
 
+.address-list {
+  display: flex;
+  gap: 40px;
+}
+
 .address-list-link {
   color: var(--primary-dark-color);
 }
@@ -114,31 +178,38 @@ button {
 
 /* ====== HERO ====== */
 .hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
   background-color: var(--secondary-dark-color);
 }
 
 .hero-header {
-  font-size: 56px;
-  line-height: 1.07;
+  width: 496px;
+  margin-bottom: 48px;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
   letter-spacing: var(--primary-letter-spacing);
   color: var(--primary-light-color);
-  font-weight: 700;
 }
 
 .hero-button {
+  margin-right: auto;
+  margin-left: auto;
+  border: 0;
+  padding: 16px 32px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 10px;
   background-color: var(--primary-accent-color);
-  font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: var(--button-letter-spacing);
   color: var(--primary-light-color);
-}
-
-.hero-button:hover,
-.hero-button:focus {
-  background-color: var(--secondary-accent-color);
 }
 
 /* ====== /HERO ====== */
@@ -201,11 +272,6 @@ button {
 /* ====== PORTFOLIO PAGE ====== */
 
 .portfolio-filter-btn {
-  font-family: var(--primary-font);
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: var(--button-letter-spacing);
   color: var(--primary-accent-color);
   background-color: var(--secondary-light-color);
 }
@@ -214,7 +280,6 @@ button {
 .portfolio-filter-btn:focus {
   color: var(--primary-light-color);
   background-color: var(--secondary-accent-color);
-  cursor: pointer;
 }
 
 .portfolio-filter-btn:active {
