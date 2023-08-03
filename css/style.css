@@ -44,7 +44,6 @@ img {
 
 /* наслідування (inheritance) */
 body {
-  /* margin: 0; */
   font-family: var(--primary-font);
   font-size: 16px;
   line-height: 1.5;
@@ -129,15 +128,12 @@ button:focus {
 
 .page-header-container {
   display: flex;
-  /* height: 72px; */
   justify-content: space-between;
   align-items: center;
-  /* flex-shrink: 0; */
 }
 
 .page-navigation {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
@@ -182,9 +178,6 @@ button:focus {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
   background-color: var(--secondary-dark-color);
 }
 
@@ -367,8 +360,6 @@ button:focus {
 }
 
 .portfolio-card {
-  /* width: 360px;
-  height: 420px; */
 }
 
 .portfolio-card-block {
