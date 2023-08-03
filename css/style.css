@@ -146,14 +146,14 @@ button:focus {
 }
 
 .menu {
-  padding-top: 24px;
-  padding-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
 .menu-link {
+  display: inline-block;
+  padding: 24px 0;
   font-weight: 500;
   color: var(--secondary-dark-color);
 }
@@ -182,7 +182,7 @@ button:focus {
 }
 
 .hero-header {
-  width: 496px;
+  max-width: 496px;
   margin-bottom: 48px;
   margin-right: auto;
   margin-left: auto;
@@ -195,13 +195,12 @@ button:focus {
 }
 
 .hero-button {
+  min-width: 169px;
   margin-right: auto;
   margin-left: auto;
   border: 0;
   padding: 16px 32px;
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 10px;
+  display: block;
   background-color: var(--primary-accent-color);
   color: var(--primary-light-color);
 }
@@ -211,7 +210,7 @@ button:focus {
 
 .features {
   padding-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
 }
 
 .features-list {
@@ -223,10 +222,10 @@ button:focus {
   flex-basis: calc((100% - 3 * 24px) / 4);
   flex-direction: column;
   align-items: flex-start;
-  gap: 8px;
 }
 
 .features-item-header {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -238,8 +237,7 @@ button:focus {
 /* ====== SERVICES ====== */
 
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 120px;
 }
 
 .services-header {
@@ -260,8 +258,8 @@ button:focus {
 /* ====== TEAM ====== */
 
 .team {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 120px;
+  padding-bottom: 120px;
   text-align: center;
   background-color: var(--secondary-light-color);
 }
@@ -289,21 +287,21 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  padding-bottom: 32px;
   background-color: var(--primary-light-color);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-name-blocks {
+  padding: 32px 0;
   width: 232px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
 }
 
 .team-item-header {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -338,13 +336,13 @@ button:focus {
 
 .portfolio-filter-btn:hover,
 .portfolio-filter-btn:focus {
-  border: 0;
+  border: 1px solid transparent;
   color: var(--primary-light-color);
   background-color: var(--secondary-accent-color);
 }
 
 .portfolio-filter-btn:active {
-  border: 0;
+  border: 1px solid transparent;
   color: var(--primary-light-color);
   background-color: var(--secondary-accent-color);
 }
@@ -370,11 +368,11 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 8px;
   align-self: stretch;
 }
 
 .portfolio-card-header {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -389,20 +387,17 @@ button:focus {
 /* ====== FOOTER ====== */
 
 .footer {
-  padding: 100px 141px;
+  padding: 100px 0;
   background-color: var(--secondary-dark-color);
   color: var(--secondary-light-color);
 }
 
-.footer-container {
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+.footer > .container > .logo {
+  display: inline-block;
+  margin-bottom: 16px;
 }
 
 .footer-logo-span {
-  margin-bottom: 16px;
   color: var(--secondary-light-color);
 }
 
