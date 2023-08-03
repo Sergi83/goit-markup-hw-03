@@ -124,8 +124,7 @@ button:focus {
 /* ====== PAGE HEADER ====== */
 
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  border-bottom: 1px solid var(--accent-light-color);
 }
 
 .page-header-container {
@@ -151,6 +150,8 @@ button:focus {
 }
 
 .menu {
+  padding-top: 24px;
+  padding-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -215,6 +216,23 @@ button:focus {
 /* ====== /HERO ====== */
 /* ====== FEATURES ====== */
 
+.features {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+.features-list-item {
+  display: flex;
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 .features-item-header {
   font-weight: 500;
   font-size: 20px;
@@ -226,7 +244,13 @@ button:focus {
 /* ====== /FEATURES ====== */
 /* ====== SERVICES ====== */
 
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .services-header {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -234,10 +258,17 @@ button:focus {
   color: var(--secondary-dark-color);
 }
 
+.services-list {
+  display: flex;
+  gap: 24px;
+}
+
 /* ====== /SERVICES ====== */
 /* ====== TEAM ====== */
 
 .team {
+  padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
   background-color: var(--secondary-light-color);
 }
@@ -250,12 +281,33 @@ button:focus {
 }
 
 .team-header {
+  margin-bottom: 72px;
   font-size: 36px;
   line-height: 1.11;
 }
 
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+
 .team-item {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
   background-color: var(--primary-light-color);
+}
+
+.team-name-blocks {
+  width: 232px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .team-item-header {
@@ -271,23 +323,65 @@ button:focus {
 /* ====== /TEAM ====== */
 /* ====== PORTFOLIO PAGE ====== */
 
+.portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
+.portfolio-filters {
+  margin-bottom: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
 .portfolio-filter-btn {
+  padding: 12px 24px;
+  border: 1px solid var(--accent-light-color);
   color: var(--primary-accent-color);
   background-color: var(--secondary-light-color);
 }
 
 .portfolio-filter-btn:hover,
 .portfolio-filter-btn:focus {
+  border: 0;
   color: var(--primary-light-color);
   background-color: var(--secondary-accent-color);
 }
 
 .portfolio-filter-btn:active {
+  border: 0;
   color: var(--primary-light-color);
   background-color: var(--secondary-accent-color);
 }
 
 /* PORTFOLIO CARDS */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 48px 24px;
+}
+
+.portfolio-card {
+  /* width: 360px;
+  height: 420px; */
+}
+
+.portfolio-card-block {
+  display: flex;
+  padding: 32px 16px;
+  border: 1px solid var(--accent-light-color);
+  border-top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
 
 .portfolio-card-header {
   font-weight: 500;
@@ -304,15 +398,25 @@ button:focus {
 /* ====== FOOTER ====== */
 
 .footer {
+  padding: 100px 141px;
   background-color: var(--secondary-dark-color);
   color: var(--secondary-light-color);
 }
 
+.footer-container {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .footer-logo-span {
+  margin-bottom: 16px;
   color: var(--secondary-light-color);
 }
 
 .footer-text {
+  width: 264px;
   letter-spacing: var(--primary-letter-spacing);
 }
 
